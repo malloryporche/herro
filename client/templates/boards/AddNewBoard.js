@@ -1,6 +1,6 @@
 Template.AddNewBoard.events({
 	//When form is submitted via Enter
-	'submit form': function(e, tmpl) {
+	'submit form': function(e, t) {
 		
 		 	//Prevent default submission of form
 			e.preventDefault();
