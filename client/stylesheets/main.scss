@@ -1,17 +1,25 @@
-.container {
+.container 
+	{
 	padding: 0;
 
-}
-section#main {
+	}
+section#main 
+	{
 	padding: 0px 15px;
-}
+	}
 
-a {
+a 
+	{
 	text-decoration: none;
-}
-a:hover {			text-decoration: none;
-}
+	}
+a:hover 
+	{	
+		text-decoration: none;
+	}
+
+
 /* Header & Navbar styling */
+
 
 header {
 	padding: 10px;
@@ -51,3 +59,50 @@ div.navbar-header {
 div.navbar-header.header-right {
 		float: right;
 	}
+
+
+
+
+/* BOARDS */
+
+	h3.heading-4.proper {
+		text-align: left;
+		color: black;
+		background: white;
+		text-transform: uppercase;
+}
+.boards {
+	display: inline-block;
+	width: 100%;
+	border: 3px solid seagreen;
+	background-color: seagreen;
+	color: white;
+	height: 115px;
+	margin: 10px auto;
+	h3 {
+		text-align: center;
+		a {
+			color: white;
+		}
+	}
+}
+
+span.boardStar {
+	color: white;
+	padding: 0 0 7px 7px;
+
+}
+/* BOARD TITLE */
+
+.heading {
+	text-transform: uppercase;
+	letter-spacing: 0.25em;
+	text-align: center;
+	padding: 0;
+	border-bottom: 2px solid black;
+	margin-bottom: 30px;
+}
+
+.tasklist {
+	margin: 10px;
+}
