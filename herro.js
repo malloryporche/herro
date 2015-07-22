@@ -18,7 +18,7 @@ if (Meteor.isClient) {
     }
   });
 
-  Template.AddNewTaskList.helpers({
+  Template.addNewTaskLists.helpers({
     cards: function() {
     return Cards.find({ tasklistId: this._id});
   }

@@ -11,6 +11,7 @@ Template.AddNewBoard.events({
 			boardTitle = boardTitleElement.value,
 			timestamp = new Date,
 			boardId = this._id;
+			
 		//Method call to append board id to taskListId
 		Meteor.call('addNewBoards', boardTitle, timestamp, boardId, function( error, result) { 
              if (error) {
