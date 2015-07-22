@@ -7,3 +7,10 @@
 meteor-platform
 autopublish
 insecure
+twbs:bootstrap
+fourseven:scss
+iron:router
+reywood:publish-composite
+underscore
+cfs:standard-packages
+cfs:gridfs
