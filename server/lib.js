@@ -8,23 +8,19 @@ Meteor.methods({
     });
    return addNewBoards;
  },
- deleteBoards: function (value1) {
-     return  Boards.remove({ '_id': value1});
+ deleteBoards: function (value0) {
+     return  Boards.remove({ '_id': value0});
  },
- saveTaskLists: function (value0, value1, value2, value3, value4, value5, value6) {
-   var newTaskLists = TaskLists.insert({ 
-         '_id' : value0,
-         'url' :  value1,
-         'urlTitle' : value2,
-         'urlDescription' : value3,
-         'urlImages' : value4,
-         'userTitle' :value5,
-         'boards_id' : value6
+ addNewTaskLists: function (value0, value1, value2) {
+   var addNewTaskLists = TaskLists.insert({ 
+        'taskListTitle' : value0,
+        'timestamp' :  value1,
+        'boardId' : value2
      });
-   return newTaskLists;
+   return addNewTaskLists;
  },
- deleteTaskLists: function (value1) {
-     return TaskLists.remove({ '_id': value1});
+ deleteTaskLists: function (value0) {
+     return TaskLists.remove({ '_id': value0});
  },
  addNewCard: function(value0, value1, value2, value3, value4, value5, value6) {
    var addNewCard = Cards.insert({ 
@@ -37,6 +33,10 @@ Meteor.methods({
          'boardTitle' : value6
      });
    return addNewCard;
+ },
+
+ deleteCard: function (value0) {
+     return Cards.remove({ '_id': value0});
  },
 updateFavorites: function(value0, value1) {
     var updateFavorites = Boards.update({
