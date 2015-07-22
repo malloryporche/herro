@@ -11,7 +11,7 @@ Meteor.methods({
  deleteBoards: function (value0) {
      return  Boards.remove({ '_id': value0});
  },
- addNewTaskLists: function (value0, value1, value2) {
+ addNewTaskList: function (value0, value1, value2) {
    var addNewTaskLists = TaskLists.insert({ 
         'taskListTitle' : value0,
         'timestamp' :  value1,
@@ -22,15 +22,14 @@ Meteor.methods({
  deleteTaskLists: function (value0) {
      return TaskLists.remove({ '_id': value0});
  },
- addNewCard: function(value0, value1, value2, value3, value4, value5, value6) {
+ addNewCard: function(value0, value1, value2, value3, value4, value5) {
    var addNewCard = Cards.insert({ 
-         '_id' : value0,
-         'title' :  value1,
-         'timestamp' : value2,
-         'boardId' : value3,
-         'urlImages' : value4,
-         'tasklistId' :value5,
-         'boardTitle' : value6
+         'CardTitle' : value0,
+         'timestamp' :  value1,
+         'CardId' : value2,
+         'boardTitle' : value3,
+         'boardId' : value4,
+         'boardTitle' :value5
      });
    return addNewCard;
  },

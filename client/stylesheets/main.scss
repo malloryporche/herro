@@ -106,3 +106,24 @@ span.boardStar {
 .tasklist {
 	margin: 10px;
 }
+
+/*  TASKLISTS */
+h3.tasklist-title {
+	color: seagreen;
+
+}
+input.AddNewCard {
+	margin: 10px 0px;
+	padding: 0px 7px;
+	width: 90%;
+	border: none;
+	letter-spacing: 0.15em;
+}
+.card {
+	h4 {
+		display: inline-block;
+	}
+}
+input.checkbox {
+	display: inline-block;
+}
