@@ -1,0 +1,19 @@
+<template name="BoardsList">
+
+	<div class="boards">
+	
+		<h3 class="heading-4">Starred Boards</h3>	
+
+			{{starredBoards}}
+			
+		<h3 class="heading-4">My Boards</h3>
+
+			{{#each boards}}
+
+				{{> Boards}}
+
+			{{/each}}
+
+	</div>
+
+</template>

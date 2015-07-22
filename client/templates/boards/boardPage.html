@@ -1,0 +1,16 @@
+<template name="boardPage">
+	
+	<div class="heading">
+		<h2>{{title}}</h2>
+	</div>
+
+		{{> AddNewTaskList}}
+
+		
+		{{#each tasklists}}
+
+			{{> Tasklist}}
+
+		{{/each }}
+
+</template>

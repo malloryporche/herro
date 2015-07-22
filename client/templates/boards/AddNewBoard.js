@@ -1,6 +1,7 @@
 Template.AddNewBoard.events({
 	//When form is submitted via Enter
-	'submit input.newBoard': function(e, tmpl) {
+	'keypress input.newBoard': function(e, tmpl) {
+		 if (e.which === 13) {
 		 	//Prevent default submission of form
 			e.preventDefault();
 
@@ -11,17 +12,16 @@ Template.AddNewBoard.events({
 			title = boardTitle,
 			timestamp = new Date,
 			boardId = this._id;
-
-		//Method call to create a new Board and add it to collection
+		//Method call to append board id to taskListId
 		Meteor.call('addNewBoards', title, timestamp, boardId, function( error, result) { 
              if (error) {
-               throw new Meteor.Error("Problem creating new board");
-
+               throw new Meteor.Error(error);
              }
 
 		//Clear form
 		formEl.reset();
-		});
 
-	}
+		});
+}
+}
 });
