@@ -1,7 +1,7 @@
 Template.AddNewBoard.events({
 	//When form is submitted via Enter
-	'keypress input.newBoard': function(e, tmpl) {
-		 if (e.which === 13) {
+	'submit form': function(e, tmpl) {
+		
 		 	//Prevent default submission of form
 			e.preventDefault();
 
@@ -22,6 +22,6 @@ Template.AddNewBoard.events({
 		formEl.reset();
 
 		});
-}
+
 }
 });
