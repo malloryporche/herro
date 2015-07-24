@@ -23,7 +23,6 @@ Template.Boards.events({
     },
     'click .remove': function(){
         //when remove icon is clicked
-        debugger
             Meteor.call('deleteBoards', this._id, function( error, result) {
             if (error) {
                     throw new Meteor.Error(error);
