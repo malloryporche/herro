@@ -6,7 +6,7 @@ Template.Boards.events({
         var _id = this._id,
         	checked = $(e.currentTarget).is(':checked');
         // set this._id to favorites true in collection
-        debugger
+        // debugger
         if ( checked ) {
         	Meteor.call('updateFavorites', _id, true, function( error, result) { 
              if (error) {
@@ -14,19 +14,32 @@ Template.Boards.events({
              }
             });
     	} else {
-            var unFavorited = false;
     		Meteor.call('updateFavorites', _id, false, function( error, result) { 
              if (error) {
                throw new Meteor.Error(error);
              }
             });
     	}
+    },
+    'click .remove': function(){
+        //when remove icon is clicked
+            Meteor.call('deleteBoards', this._id, function( error, result) {
+            if (error) {
+                    throw new Meteor.Error(error);
+            }
+            });
+        }
+
+    });
+
+
+Template.Boards.helpers({
+    starredBoards: function(){
+
+        if ( this.favorite ) {
+            var favorite = this.boardTitle;
+        }
+        return favorite;
     }
+    
 });
-
-
-// Template.Board.helpers({
-//   _myName: function () {
-//     return "Dennis";
-//   }
-// });
