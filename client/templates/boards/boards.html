@@ -1,0 +1,11 @@
+<template name="Boards">
+	<div class="boards">
+		<h3>
+			<a href="{{pathFor 'boardPage'}}">{{boardTitle}}</a>
+			<i class="fa fa-remove"></i><span class="hidden">Delete List</span>
+		</h3>
+		<h1><input class="favorites" type="checkbox">{{starredBoards}}</h1>
+		<!-- previous star setup -->
+		<!-- <h1><a href="#"><span class="glyphicon glyphicon-star-empty boardStar"><input type="checkbox"></span></a></h1> -->
+	</div>
+</template>
