@@ -116,6 +116,7 @@ h2.board-title 	input {
 
 }
 .tasklist {
+	position: relative;
 	margin: 10px;
 	width: 250px;
 	display: inline-block;
@@ -124,6 +125,10 @@ h2.board-title 	input {
 	border: 1px solid black;
 	margin: 3px;
 	padding: 3px;
+	.remove {
+		float: right;
+		top: 0;
+	}
 }
 
 /*  TASKLISTS */
@@ -147,4 +152,11 @@ input.AddNewCard {
 }
 input.checkbox {
 	display: inline-block;
+}
+
+/*   CARDS    */
+i.fa.fa-remove.remove {
+	position: absolute;
+	right: 10px;
+	top: 10px;
 }

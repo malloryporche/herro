@@ -4,3 +4,14 @@ Template.TaskList.helpers({
 		}
 
 	});
+Template.TaskList.events({
+	'click .remove': function(){
+		 // debugger
+        //when remove icon is clicked
+            Meteor.call('deleteTasklist', this._id, function( error, result) {
+            if (error) {
+                    throw new Meteor.Error(error);
+            }
+            });
+        }
+})
