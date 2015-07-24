@@ -105,6 +105,11 @@ span.boardStar {
 
 .tasklist {
 	margin: 10px;
+	width: 250px;
+	display: inline-block;
+	height: 250px;
+	overflow-y: scroll;
+	
 }
 
 /*  TASKLISTS */
