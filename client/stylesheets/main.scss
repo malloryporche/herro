@@ -149,6 +149,11 @@ input.AddNewCard {
 	h4 {
 		display: inline-block;
 	}
+	a {
+		position: absolute;
+		right: 0;
+		color: salmon;
+	}
 }
 input.checkbox {
 	display: inline-block;
