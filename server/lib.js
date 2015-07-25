@@ -12,12 +12,20 @@ deleteBoards: function (value0) {
      return  Boards.remove({ '_id': value0});
  },
 addNewTaskList: function (value0, value1, value2) {
-   var addNewTaskLists = TaskLists.insert({ 
+    var titleExists = TaskLists.findOne({'taskListTitle': value0});
+debugger
+   if (!titleExists) {
+
+    
+
+     var addNewTaskLists = TaskLists.insert({ 
         'taskListTitle' : value0,
         'timestamp' :  value1,
         'boardId' : value2
      });
+     console.log("Code executed");
    return addNewTaskLists;
+   } 
  },
 deleteTaskList: function (value0) {
      return TaskLists.remove({ '_id': value0});

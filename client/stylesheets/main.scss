@@ -121,10 +121,10 @@ h2.board-title 	input {
 	width: 250px;
 	display: inline-block;
 	height: 250px;
-	overflow-y: scroll;
+	overflow-y: auto;
 	border: 1px solid black;
 	margin: 3px;
-	padding: 3px;
+	padding: 0 5px 5px 5px;
 	.remove {
 		float: right;
 		top: 0;
@@ -132,8 +132,15 @@ h2.board-title 	input {
 }
 
 /*  TASKLISTS */
+div.tasklist-title {
+	position: fixed;
+	background-color: white;
+	width: 240px;
+	z-index: 500;
+}
 h3.tasklist-title {
 	color: seagreen;
+	border-bottom: 1px solid black; 
 }
 .task.remove {
 	color: salmon;
@@ -145,6 +152,17 @@ input.AddNewCard {
 	border: none;
 	letter-spacing: 0.15em;
 }
+
+input.checkbox {
+	display: inline-block;
+}
+
+/*   CARDS    */
+i.fa.fa-remove.remove {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
 .card {
 	h4 {
 		display: inline-block;
@@ -155,13 +173,8 @@ input.AddNewCard {
 		color: salmon;
 	}
 }
-input.checkbox {
-	display: inline-block;
-}
-
-/*   CARDS    */
-i.fa.fa-remove.remove {
-	position: absolute;
-	right: 10px;
-	top: 10px;
+div.card-body {
+	position: relative;
+	padding-top: 60px;
+	background-color: white;
 }
