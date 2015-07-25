@@ -12,11 +12,11 @@ deleteBoards: function (value0) {
      return  Boards.remove({ '_id': value0});
  },
 addNewTaskList: function (value0, value1, value2) {
-    var titleExists = TaskLists.findOne({'taskListTitle': value0});
-debugger
-   if (!titleExists) {
-
     
+    //If TaskList Title exists, do not allow creation of duplicate titles
+    var titleExists = TaskLists.findOne({'taskListTitle': value0});
+   
+   if (!titleExists) {
 
      var addNewTaskLists = TaskLists.insert({ 
         'taskListTitle' : value0,
@@ -46,10 +46,9 @@ deleteCards: function (value0) {
      return Cards.remove({ '_id': value0});
  },
 updateFavorites: function(value0, value1) {
-    var updateFavorites = Boards.update({
-        '_id' : value0,
-        'favorite' : value1
-    });
-    return updateFavorites;
-}
+    var updateFavorites = Boards.update({'_id' : value0,}, 
+                                        {$set: {favorite: true}});
+        return updateFavorites;
+    }
+
 });
