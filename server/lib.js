@@ -47,7 +47,7 @@ deleteCards: function (value0) {
  },
 updateFavorites: function(value0, value1) {
     var updateFavorites = Boards.update({'_id' : value0,}, 
-                                        {$set: {favorite: true}});
+                                        {$set: {favorite: value1}});
         return updateFavorites;
     }
 
