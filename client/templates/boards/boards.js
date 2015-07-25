@@ -28,7 +28,14 @@ Template.Boards.events({
                     throw new Meteor.Error(error);
             }
             });
-        }
+        },
+
+    'click .fa.fa-edit': function(){
+        //when edit icon is clicked
+        debugger
+        sAlert.error('Your message', configOverwrite);
+
+    }
 
     });
 

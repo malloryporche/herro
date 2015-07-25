@@ -1,4 +1,14 @@
 if (Meteor.isClient) {
+    // code to run on server at startup
+   sAlert.config({
+        effect: 'jelly',
+        position: 'top-right',
+        timeout: 5000,
+        html: false,
+        onRouteClose: true,
+        stack: true,
+        offset: 0
+    })
   Meteor.subscribe('tasklists');  
 
   Meteor.subscribe('boards');
@@ -27,9 +37,8 @@ if (Meteor.isClient) {
 
 if (Meteor.isServer) {
   Meteor.startup(function () {
-    // code to run on server at startup
-  
-    });
 
+
+});
 }
 
