@@ -6,7 +6,11 @@
 
 		<div class="boards">
 
-			{{starredBoards}}
+			{{#each starredBoards}}
+
+				{{> Boards}}
+
+			{{/each}}
 			
 		</div>	
 

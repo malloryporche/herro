@@ -25,6 +25,8 @@ addNewTaskList: function (value0, value1, value2) {
      });
      console.log("Code executed");
    return addNewTaskLists;
+   } else {
+    sAlert.error('You already have a tasklist with that Title.  Please enter another tasklist title.', {effect: 'jelly', position:'top-right', timeout: 'none', onRouteClose: false, stack: false, offset: '80px'});
    } 
  },
 deleteTaskList: function (value0) {

@@ -64,8 +64,12 @@ div.navbar-header.header-right {
 
 
 /* BOARDS */
-
-	h3.heading-4.proper {
+a.remove {
+	float: right;
+	color: salmon;
+	
+}
+h3.heading-4.proper {
 		text-align: left;
 		color: black;
 		background: white;

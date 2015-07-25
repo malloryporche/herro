@@ -12,7 +12,7 @@ Template.addNewTaskLists.events({
 			timestamp =  new Date,
 			boardId = this._id;
 
-		//Create new task list method on the server
+		//Call Add new task list method on the server
 		Meteor.call('addNewTaskList', taskListTitle, timestamp, boardId, function( error, result) { 
              if (error) {
                throw new Meteor.Error(error);

@@ -33,13 +33,13 @@ Template.Boards.events({
     });
 
 
-Template.Boards.helpers({
-    starredBoards: function(){
+// Template.Boards.helpers({
+//     starredBoards: function(){
 
-        if ( this.favorite ) {
-            var favorite = this.boardTitle;
-        }
-        return favorite;
-    }
+//         if ( this.favorite ) {
+//             var favorite = this.boardTitle;
+//         }
+//         return favorite;
+//     }
     
-});
+// });
