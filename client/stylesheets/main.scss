@@ -67,7 +67,7 @@ div.navbar-header.header-right {
 a.remove {
 	float: right;
 	color: salmon;
-	
+
 }
 h3.heading-4.proper {
 		text-align: left;
@@ -137,7 +137,7 @@ h2.board-title 	input {
 
 /*  TASKLISTS */
 div.tasklist-title {
-	position: fixed;
+	display: block;
 	background-color: white;
 	width: 240px;
 	z-index: 500;
@@ -178,7 +178,7 @@ i.fa.fa-remove.remove {
 	}
 }
 div.card-body {
-	position: relative;
+	display: block;
 	padding-top: 60px;
 	background-color: white;
 }

@@ -1,7 +1,7 @@
 <template name="Card">
 	<div class="card">
 	<input type="checkbox" class="checkbox"/>
-	<h4>{{CardTitle}} </h4>
+		<h4><a href="{{pathFor 'TaskListPage'}}">{{TaskListTitle}}</a></h4>
 	<a href="#" name="remove"><i class="fa fa-remove card remove"></i></a>
 	</div>
 </template>
