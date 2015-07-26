@@ -1,12 +1,12 @@
 Template.AddNewBoard.events({
 	//When form is submitted via Enter
-	'submit input.newBoard': function(e, tmpl) {
+	'submit input.newBoard': function(e, t) {
 		 	//Prevent default submission of form
 			e.preventDefault();
 
 		//Get access to form itself
-		var formEl = tmpl.find('form'),
-			boardTitleElement = tmpl.find('[name=addNewBoard]'),
+		var formEl = t.find('form'),
+			boardTitleElement = t.find('[name=addNewBoard]'),
 			boardTitle = boardTitleElement.value,
 			title = boardTitle,
 			timestamp = new Date,
