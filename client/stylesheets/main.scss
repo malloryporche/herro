@@ -98,7 +98,9 @@ span.boardStar {
 
 }
 /* BOARD TITLE */
-
+h2.board-title {
+	text-align: left;
+}
 .heading {
 	text-transform: uppercase;
 	letter-spacing: 0.25em;
@@ -107,15 +109,39 @@ span.boardStar {
 	border-bottom: 2px solid black;
 	margin-bottom: 30px;
 }
+h2.board-title 	input {
+	float: right;
+	margin-top: -40px;
+	border: transparent;
+	border-bottom: 1px solid seagreen;
+	text-align: right;
+	text-transform: uppercase;
+	letter-spacing: 0.25em;
+	width: 450px;
 
+}
 .tasklist {
+	position: relative;
 	margin: 10px;
+	width: 250px;
+	display: inline-block;
+	height: 250px;
+	overflow-y: scroll;
+	border: 1px solid black;
+	margin: 3px;
+	padding: 3px;
+	.remove {
+		float: right;
+		top: 0;
+	}
 }
 
 /*  TASKLISTS */
 h3.tasklist-title {
 	color: seagreen;
-
+}
+.task.remove {
+	color: salmon;
 }
 input.AddNewCard {
 	margin: 10px 0px;
@@ -131,4 +157,11 @@ input.AddNewCard {
 }
 input.checkbox {
 	display: inline-block;
+}
+
+/*   CARDS    */
+i.fa.fa-remove.remove {
+	position: absolute;
+	right: 10px;
+	top: 10px;
 }

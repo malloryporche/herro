@@ -14,7 +14,7 @@ Template.AddNewCard.events({
 			boardId = this.boardId,
 			taskTitle = this.taskListTitle;
 			
-			debugger
+			// debugger
 		//Method call to append board id to taskListId
 		Meteor.call('addNewCards', CardTitle, timestamp, CardId, boardId, boardId, taskTitle, function( error, result) { 
              if (error) {

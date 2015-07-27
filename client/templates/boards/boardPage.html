@@ -1,11 +1,16 @@
 <template name="boardPage">
 	
 	<div class="heading">
-		<h2>{{boardTitle}}</h2>
-	</div>
+	
+		<h2 class="board-title">
 
-		{{> addNewTaskLists}}
+			{{boardTitle}}
+	
+			{{> addNewTaskLists}} 
 
+		</h2>
+
+		</div>
 		
 		{{#each tasklists}}
 
