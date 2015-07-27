@@ -28,18 +28,25 @@ Template.Boards.events({
                     throw new Meteor.Error(error);
             }
             });
-        }
+        },
+
+    'click .fa.fa-edit': function(){
+        //when edit icon is clicked
+        debugger
+        sAlert.error('Your message', configOverwrite);
+
+    }
 
     });
 
 
-Template.Boards.helpers({
-    starredBoards: function(){
+// Template.Boards.helpers({
+//     starredBoards: function(){
 
-        if ( this.favorite ) {
-            var favorite = this.boardTitle;
-        }
-        return favorite;
-    }
+//         if ( this.favorite ) {
+//             var favorite = this.boardTitle;
+//         }
+//         return favorite;
+//     }
     
-});
+// });

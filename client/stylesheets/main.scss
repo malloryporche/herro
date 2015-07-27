@@ -64,8 +64,12 @@ div.navbar-header.header-right {
 
 
 /* BOARDS */
+a.remove {
+	float: right;
+	color: salmon;
 
-	h3.heading-4.proper {
+}
+h3.heading-4.proper {
 		text-align: left;
 		color: black;
 		background: white;
@@ -91,6 +95,15 @@ div.navbar-header.header-right {
 	display: block;
 	position: fixed;
 	right: 25px;
+
+.glyphicon:before {
+	visibility: visible;
+}
+.glyphicon.glyphicon-star-empty:checked:before {
+	content: "\e006";
+}
+input[type=checkbox].glyphicon{
+	visibility: hidden;
 }
 span.boardStar {
 	color: white;
@@ -126,10 +139,10 @@ h2.board-title 	input {
 	width: 250px;
 	display: inline-block;
 	height: 250px;
-	overflow-y: scroll;
+	overflow-y: auto;
 	border: 1px solid black;
 	margin: 3px;
-	padding: 3px;
+	padding: 0 5px 5px 5px;
 	.remove {
 		float: right;
 		top: 0;
@@ -137,8 +150,15 @@ h2.board-title 	input {
 }
 
 /*  TASKLISTS */
+div.tasklist-title {
+	display: block;
+	background-color: white;
+	width: 240px;
+	z-index: 500;
+}
 h3.tasklist-title {
 	color: seagreen;
+	border-bottom: 1px solid black; 
 }
 .task.remove {
 	color: salmon;
@@ -150,11 +170,7 @@ input.AddNewCard {
 	border: none;
 	letter-spacing: 0.15em;
 }
-.card {
-	h4 {
-		display: inline-block;
-	}
-}
+
 input.checkbox {
 	display: inline-block;
 }
@@ -165,3 +181,27 @@ i.fa.fa-remove.remove {
 	right: 10px;
 	top: 10px;
 }
+<<<<<<< HEAD
+=======
+.card {
+	h4 {
+		display: inline-block;
+	}
+	a {
+		position: absolute;
+		right: 0;
+		color: salmon;
+	}
+}
+div.card-body {
+	display: block;
+	padding-top: 60px;
+	background-color: white;
+}
+
+@media (min-width: 751px) {
+	.boards {
+			max-width: 220px;
+	}
+}
+>>>>>>> 6603878f14166e28c8436be53ddca0d77cac2bbf

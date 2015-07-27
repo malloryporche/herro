@@ -12,15 +12,15 @@ Template.addNewTaskLists.events({
 			timestamp =  new Date,
 			boardId = this._id;
 
-		//Create new task list method on the server
+		//Call Add new task list method on the server
 		Meteor.call('addNewTaskList', taskListTitle, timestamp, boardId, function( error, result) { 
              if (error) {
-               throw new Meteor.Error(error);
+              _alerts("error", "You already have a Tasklist with this title on this board.  Please enter a new tasklist name.  Thank you.");
              }
 
 		//Clear form
 		formElement.reset();
 
 	});
-	
+	 
 }});

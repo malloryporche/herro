@@ -12,13 +12,22 @@ deleteBoards: function (value0) {
      return  Boards.remove({ '_id': value0});
  },
 addNewTaskList: function (value0, value1, value2) {
-   var addNewTaskLists = TaskLists.insert({ 
+    
+    //If TaskList Title exists, do not allow creation of duplicate titles
+    var titleExists = TaskLists.findOne({'taskListTitle': value0});
+   
+   if (titleExists) {
+        _alerts("error", "You already have a Tasklist with this title on this board.  Please enter a new tasklist name.");}
+    else {
+     var addNewTaskLists = TaskLists.insert({ 
         'taskListTitle' : value0,
         'timestamp' :  value1,
         'boardId' : value2
      });
+     console.log("Code executed");
    return addNewTaskLists;
- },
+   };
+},
 deleteTaskList: function (value0) {
      return TaskLists.remove({ '_id': value0});
  },
@@ -38,10 +47,9 @@ deleteCards: function (value0) {
      return Cards.remove({ '_id': value0});
  },
 updateFavorites: function(value0, value1) {
-    var updateFavorites = Boards.update({
-        '_id' : value0,
-        'favorite' : value1
-    });
-    return updateFavorites;
-}
+    var updateFavorites = Boards.update({'_id' : value0,}, 
+                                        {$set: {favorite: value1}});
+        return updateFavorites;
+    }
+
 });

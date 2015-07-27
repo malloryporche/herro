@@ -1,12 +1,15 @@
 <template name="Boards">
 	<div class="boards">
+
 		<a herf="#" class="edit"><i class="fa fa-edit"></i></a>
 		<a herf="#" class="remove"><i class="fa fa-remove"></i></a>
+		<input type="checkbox" class="favorites glyphicon glyphicon-star-empty">
+		
 		<h3>
 			<a href="{{pathFor 'boardPage'}}">{{boardTitle}}</a>
 		</h3>
-		<h1><input class="favorites" type="checkbox">{{starredBoards}}</h1>
-		<!-- previous star setup -->
-		<!-- <h1><a href="#"><span class="glyphicon glyphicon-star-empty boardStar"><input type="checkbox"></span></a></h1> -->
+
+
+	
 	</div>
 </template>

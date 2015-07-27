@@ -1,14 +1,14 @@
 <template name="BoardsList">
 
-	
-
 		<h3 class="heading-4 proper">Starred Boards</h3>	
 
-		<div class="boards">
 
-			{{starredBoards}}
-			
-		</div>	
+			{{#each starredBoards}}
+
+				{{> Boards}}
+
+			{{/each}}
+
 
 		<h3 class="heading-4 proper">My Boards</h3>
 
@@ -18,5 +18,5 @@
 
 			{{/each}}
 
-
+		
 </template>
