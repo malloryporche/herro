@@ -60,7 +60,10 @@ div.navbar-header.header-right {
 		float: right;
 	}
 
-
+i.board-page-faves {
+	float: left;
+	left: -450px;
+}
 
 
 /* BOARDS */
@@ -95,7 +98,7 @@ h3.heading-4.proper {
 	display: block;
 	position: fixed;
 	right: 25px;
-
+}
 .glyphicon:before {
 	visibility: visible;
 }
@@ -181,27 +184,26 @@ i.fa.fa-remove.remove {
 	right: 10px;
 	top: 10px;
 }
-<<<<<<< HEAD
-=======
-.card {
+div.card-body {
 	h4 {
 		display: inline-block;
 	}
 	a {
 		position: absolute;
-		right: 0;
-		color: salmon;
+		width: 100%;
+		i.fa.fa-remove.card.remove {
+			left: 193px;
+		}
 	}
 }
-div.card-body {
+div.tasklist-body {
 	display: block;
 	padding-top: 60px;
 	background-color: white;
 }
 
 @media (min-width: 751px) {
-	.boards {
-			max-width: 220px;
+	div.boards {
+		max-width: 220px;
+		}
 	}
-}
->>>>>>> 6603878f14166e28c8436be53ddca0d77cac2bbf
