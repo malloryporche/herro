@@ -99,13 +99,13 @@ h3.heading-4.proper {
 	position: fixed;
 	right: 25px;
 }
-.glyphicon:before {
+.favorites:before {
 	visibility: visible;
 }
-.glyphicon.glyphicon-star-empty:checked:before {
-	content: "\e006";
+.favorites.fa.fa-star:checked:before {
+	content: "\f005";
 }
-input[type=checkbox].glyphicon{
+input[type=checkbox].favorites.fa.fa-star, input[type=checkbox].favorites.fa.fa-star-o{
 	visibility: hidden;
 }
 span.boardStar {
