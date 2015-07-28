@@ -19,7 +19,7 @@ addNewTaskList: function (value0, value1, value2) {
      });
    return addNewTaskLists;
  },
-deleteTaskLists: function (value0) {
+deleteTaskList: function (value0) {
      return TaskLists.remove({ '_id': value0});
  },
 addNewCards: function(value0, value1, value2, value3, value4, value5) {
