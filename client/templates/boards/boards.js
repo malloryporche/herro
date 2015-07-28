@@ -40,13 +40,12 @@ Template.Boards.events({
     });
 
 
-// Template.Boards.helpers({
-//     starredBoards: function(){
-
-//         if ( this.favorite ) {
-//             var favorite = this.boardTitle;
-//         }
-//         return favorite;
-//     }
-    
-// });
+Template.Boards.helpers({
+    favorite: function(){
+        if ( this.favorite ) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+});
