@@ -2,12 +2,21 @@
 	
 	<div class="boards boards-placement">
 
-		<a herf="#" class="edit"><i class="fa fa-edit"></i></a>
+		<a herf="#" class="edit-board-title"><i class="fa fa-edit"></i></a>
+		
 		<a herf="#" class="remove"><i class="fa fa-remove"></i></a>
 		<input type="checkbox" class="favorites fa {{#if favorite}} fa-star {{else }} fa-star-o
 		{{/if }}">
 		<h3>
+
+		{{#if isEditingBoardTitle}}
+			<form class="edit-title">
+				<input name="revisedTitle" type="text" value="{{boardTitle}}">
+				<a class="cancel" href="#">X</a>
+			</form>
+				{{else}}
 			<a href="{{pathFor 'boardPage'}}">{{boardTitle}}</a>
+		{{/if}}
 		</h3>
 
 

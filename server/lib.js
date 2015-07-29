@@ -59,5 +59,11 @@ updateFavorites: function(value0, value1) {
         console.log(value1);
     
     return updateFavorites;
-}
+},
+updateBoardTitle: function(value0, value1) {
+    var updateBoardTitle = Boards.update({'_id': value0,},
+                                        {$set: {boardTitle: value1}});
+  console.log(value1);
+    return updateBoardTitle
+} 
 });

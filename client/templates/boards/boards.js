@@ -4,8 +4,8 @@ Template.Boards.helpers({
             return true;
         } else {
             return false;
-        };
-    },
+        }
+    }
 
 });
 
@@ -46,11 +46,31 @@ Template.Boards.events({
         }
     },
 
-    'click .fa.fa-edit': function(){
+    'click a.edit-board-title': function(e,t){
         //when edit icon is clicked
         // debugger
-        sAlert.error('Your message', configOverwrite);
+        e.preventDefault();
+        Session.set('editedBoardId', this._id);
+    },
+    'submit form.edit-title': function(e,t){
+        // debugger
+        e.preventDefault();
 
+        var revisedTitle = t.$('input[name="revisedTitle"]').val();
+        if (revisedTitle.length) {
+           Meteor.call('updateBoardTitle', this._id, revisedTitle, function(error, result) {
+            if (error) {
+                throw new Meteor.Error(error)
+            }
+           });
+            Session.set('editedBoardId', null);    
+        }
+      
+         
+        // debugger
+    },
+    'click a.cancel': function(e,t){
+        e.preventDefault();
+        Session.set('editedBoardId', null);
     }
-
     });
