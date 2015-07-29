@@ -1,5 +1,9 @@
 <template name="BoardsList">
 
+		<h3 class="heading-4 proper">Add new boards to your collection below.</h3>	
+
+		{{> AddNewBoard }}
+
 		<h3 class="heading-4 proper">Starred Boards</h3>	
 
 
@@ -9,6 +13,13 @@
 
 			{{/each}}
 
+		<h3 class="heading-4 proper">Recent Boards</h3>
+
+			{{#each recentBoards}}
+
+				{{> Boards}}
+
+			{{/each}}
 
 		<h3 class="heading-4 proper">My Boards</h3>
 

@@ -19,7 +19,6 @@ Template.Boards.events({
             updatedFavoriteStatus = !this.favorite,
         	checked = $(e.currentTarget).is(':checked');
         // set this._id to the opposite of whatever favorites is stored as in collection
-        debugger
         if ( checked ) {
         	Meteor.call('updateFavorites', _id, updatedFavoriteStatus, function( error, result) { 
              if (error) {
@@ -39,7 +38,7 @@ Template.Boards.events({
 
     'click .fa.fa-edit': function(){
         //when edit icon is clicked
-        debugger
+        // debugger
         sAlert.error('Your message', configOverwrite);
 
     }
