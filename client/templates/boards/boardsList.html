@@ -6,10 +6,13 @@
 
 		<h3 class="heading-4 proper">Starred Boards</h3>	
 
-
+		
 			{{#each starredBoards}}
+					{{> Boards}}
+				
+					{{else}}
 
-				{{> Boards}}
+					<h4>Sorry there are no starred boards yet</h4>
 
 			{{/each}}
 

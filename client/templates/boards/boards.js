@@ -36,14 +36,15 @@ Template.Boards.events({
 
         if (conf == true ) {
             sAlert.success('Board successfully deleted.')
-        }
+        
         //when remove icon is clicked
             Meteor.call('deleteBoards', this._id, function( error, result) {
             if (error) {
                     throw new Meteor.Error(error);
             }
             });
-        },
+        }
+    },
 
     'click .fa.fa-edit': function(){
         //when edit icon is clicked
