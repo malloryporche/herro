@@ -11,7 +11,7 @@ Template.AddNewBoard.events({
 		Session.set('isCreatingBoard', true);
 	},
 	'click a.cancel': function(e,t){
-		debugger
+		// debugger
 		e.preventDefault();
 		Session.set('isCreatingBoard', false);
 	},

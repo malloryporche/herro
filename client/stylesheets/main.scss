@@ -65,6 +65,7 @@ input.newBoard {
 a.remove {
 	float: right;
 	color: salmon;
+	visibility: hidden;
 
 }
 h3.heading-4.proper {
@@ -86,6 +87,11 @@ h3.heading-4.proper {
 		a {
 			color: white;
 		}
+	}
+}
+div.boards:hover {
+	a.remove {
+		visibility: visible;
 	}
 }
 .closeout {
