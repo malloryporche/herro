@@ -11,7 +11,7 @@ Template.Boards.helpers({
 
 
 Template.Boards.events({
-    'click .favorites': function( e, t ){
+    'click .favorites': function(e,t){
         // code goes here
         // debugger
 
@@ -28,11 +28,10 @@ Template.Boards.events({
             });
     	} 
     },
-    'click .boards-placement': function(e,t) {
+    'click .remove': function(e, t){
+        var board = e.currentTarget;
         debugger
-        console.log(e)
-    },
-    'click .remove': function(){
+
         //when remove icon is clicked
             Meteor.call('deleteBoards', this._id, function( error, result) {
             if (error) {
