@@ -10,6 +10,11 @@ Template.AddNewBoard.events({
 		e.preventDefault();
 		Session.set('isCreatingBoard', true);
 	},
+	'click a.cancel': function(e,t){
+		debugger
+		e.preventDefault();
+		Session.set('isCreatingBoard', false);
+	},
 	//When form is submitted via Enter
 	'submit form.add-board': function(e, t) {
 		
