@@ -5,7 +5,8 @@ Template.Boards.helpers({
         } else {
             return false;
         };
-    }
+    },
+
 });
 
 
@@ -26,6 +27,10 @@ Template.Boards.events({
              }
             });
     	} 
+    },
+    'click .boards-placement': function(e,t) {
+        debugger
+        console.log(e)
     },
     'click .remove': function(){
         //when remove icon is clicked

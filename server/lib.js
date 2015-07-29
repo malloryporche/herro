@@ -4,21 +4,31 @@ addNewBoards: function (value0, value1, value2) {
         'boardTitle': value0, 
         'timestamp': value1, 
         'boardId': value2, 
-        'favorite': false 
+        'favorite': false
     });
    return addNewBoards;
  },
 deleteBoards: function (value0) {
      return  Boards.remove({ '_id': value0});
  },
-addNewTaskList: function (value0, value1, value2) {
+
+//Create a new tasklist with same board Id and Title;
+addNewTaskList: function (value0, value1, value2, value3) {
+
+//If tasklist Title already exists, prompt user to input an alternate title
+var titleExists = TaskLists.findOne({'taskListTitle': value0});
+if (titleExists) {
+        sAlert.error("error", "You already have a Tasklist with this title on this board.  Please enter a new tasklist name.")}
+else {
    var addNewTaskLists = TaskLists.insert({ 
         'taskListTitle' : value0,
         'timestamp' :  value1,
-        'boardId' : value2
+        'boardId' : value2,
+        'boardTitle' : value3,
      });
    return addNewTaskLists;
- },
+ }
+},
 deleteTaskList: function (value0) {
      return TaskLists.remove({ '_id': value0});
  },

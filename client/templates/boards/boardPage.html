@@ -1,15 +1,17 @@
 <template name="boardPage">
 	
+
+
 	<div class="heading">
-	
+		
+		{{> Favorite}}
+
 		<h2 class="board-title">
 
 			{{boardTitle}}
 		</h2>
 		
 		<div class="board-input">
-			
-			<input type="checkbox" class="favorites boardPage fa {{#if favorite}} fa-star {{else }} fa-star-o {{/if }}">
 
 			{{> addNewTaskLists}} 
 
