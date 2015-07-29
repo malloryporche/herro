@@ -6,6 +6,12 @@
 		
 		{{> Favorite}}
 
+		{{> autoformModals}}
+
+		{{#afModal class="btn btn-primary" collection="TaskLists" operation="insert"}}
+  Add a new Tasklist
+{{/afModal}}
+
 		<h2 class="board-title">
 
 			{{boardTitle}}

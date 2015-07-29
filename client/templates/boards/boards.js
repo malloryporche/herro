@@ -29,9 +29,14 @@ Template.Boards.events({
     	} 
     },
     'click .remove': function(e, t){
-        var board = e.currentTarget;
+        var board = e.currentTarget,
+            conf = confirm("Are you sure you want to delete this board?");
         debugger
+        console.log(board);
 
+        if (conf == true ) {
+            sAlert.success('Board successfully deleted.')
+        }
         //when remove icon is clicked
             Meteor.call('deleteBoards', this._id, function( error, result) {
             if (error) {
