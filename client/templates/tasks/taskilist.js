@@ -5,7 +5,7 @@ Template.TaskList.helpers({
 
 	});
 Template.TaskList.events({
-	'click .remove': function(){
+	'click .tasklist-remove': function(){
           conf = confirm("Are you sure you want to delete this tasklist?");
 
           if (conf == true ) {
@@ -14,7 +14,7 @@ Template.TaskList.events({
               Meteor.call('deleteTaskList', this._id, function( error, result) {
             if (error) {
                     throw new Meteor.Error(error);
-            }
+            };
             });
         }
 

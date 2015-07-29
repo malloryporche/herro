@@ -6,13 +6,8 @@
 		
 		{{> Favorite}}
 
-		{{> autoformModals}}
 
-		{{#afModal class="btn btn-primary" collection="TaskLists" operation="insert"}}
-  Add a new Tasklist
-{{/afModal}}
-
-		<h2 class="board-title">
+		<h2 id="boardTitle" class="board-title editable">
 
 			{{boardTitle}}
 		</h2>
@@ -30,14 +25,5 @@
 			{{> TaskList}}
 			
 		{{/each }}
-
-            <input type="text" id="newValueFromInput"  value="{{currentValue}} " />
-            <button class="btn btn-sm btn-primary" id="buttonToSaveNewValue" type="submit">Save new Value</button>
-   
-               <td>
-            <p>
-              <span class="content col-md-10" id="spanIdOnDom" ><h4>Descripcion Bebida:</h4><br>{{currentValue}} </span>
-            </p>
-              </td> 
 
 </template>

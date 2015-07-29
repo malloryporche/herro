@@ -34,7 +34,7 @@ else {
 deleteTaskList: function (value0) {
      return TaskLists.remove({ '_id': value0});
      if (error) {
-        _sAlert.error("error", "An error occurred while deleting this board.")}
+        _sAlert.error("error", "An error occurred while deleting this TaskList.")}
      },
 addNewCards: function(value0, value1, value2, value3, value4, value5) {
    var addNewCard = Cards.insert({ 

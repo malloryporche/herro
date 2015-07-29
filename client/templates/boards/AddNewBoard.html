@@ -1,7 +1,12 @@
 <template name="AddNewBoard">
+	{{#if isAddingNewBoard}}
 
-	<form>
-		<input type="text" name="addNewBoard" class="newBoard" placeholder="New Board">
-	</form>
-	
+		<form class="add-board">
+			<input type="text" name="addNewBoard" class="newBoard" value="{{name}}" placeholder="New Board">
+			
+		</form>
+		{{else}}
+			<a href="#" class="create-board">Create Board</a>
+		{{/if}}
+		
 </template>

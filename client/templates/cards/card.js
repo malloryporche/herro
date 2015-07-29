@@ -6,6 +6,10 @@ Template.Card.helpers({
 });
 Template.Card.events({
 	'click .remove': function(){
+          conf = confirm("Are you sure you want to delete this card?");
+
+          if (conf == true ) {
+
 		 // debugger
         //when remove icon is clicked
             Meteor.call('deleteCards', this._id, function( error, result) {
@@ -14,4 +18,5 @@ Template.Card.events({
             }
             });
         }
+    }
 })

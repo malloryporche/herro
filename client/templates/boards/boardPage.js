@@ -13,6 +13,8 @@ Template.boardPage.helpers({
     return Session.get("TargetValue" + this._id);
   }
 })
+
+
 Template.boardPage.events({
     'click .favorites': function( e, t ){
         // code goes here
@@ -28,16 +30,5 @@ Template.boardPage.events({
              }
             });
     	} 
-    },
-       'dbclick #spanIdOnDom' : function(e,t){
-      return Session.set("TargetValue" + t.data._id,true)//hide the span and we set the input 
-     },
-   'click #buttonToSaveNewValue': function(e, t) { 
-     //here you can take the emailId and the name based on this._id like this Collection.find({_id:this._id}).fetch(); and do the updates you want to do
-     var newValueFromInput = document.getElementById('newValueFromInput').value;
-       var idCurrentDocument = this._id;
-       var Bebida = Collection.findOne(t.data._id);
-       Collection.update({_id: idCurrentDocument}, {$set:{fieldToUpdate:   newValueFromInput}});
-       return Session.set("TargetValue" + t.data._id,false); //we hide the input and we put the span again
-      }
+    }
 });
