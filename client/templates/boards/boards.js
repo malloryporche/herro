@@ -31,7 +31,7 @@ Template.Boards.events({
     'click .remove': function(e, t){
         var board = e.currentTarget,
             conf = confirm("Are you sure you want to delete this board?");
-        debugger
+        // debugger
         console.log(board);
 
         if (conf == true ) {

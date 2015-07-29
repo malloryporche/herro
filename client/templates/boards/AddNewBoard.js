@@ -31,7 +31,8 @@ Template.AddNewBoard.events({
 
 		//Clear form
 		formElement.reset();
-
+		Session.set('isCreatingBoard', false);
+		debugger
 		});
 
 }
