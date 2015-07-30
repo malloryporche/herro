@@ -5,8 +5,10 @@ Template.Boards.helpers({
         } else {
             return false;
         }
-    }
-
+    },
+     isEditingBoardTitle: function() {
+            return Session.get('isEditingBoardTitle');
+        }
 });
 
 
@@ -51,11 +53,13 @@ Template.Boards.events({
         // debugger
         e.preventDefault();
         Session.set('editedBoardId', this._id);
+        Session.set('isEditingBoardTitle', true);
     },
     'submit form.edit-title': function(e,t){
         // debugger
         e.preventDefault();
-
+        
+        
         var revisedTitle = t.$('input[name="revisedTitle"]').val();
         if (revisedTitle.length) {
            Meteor.call('updateBoardTitle', this._id, revisedTitle, function(error, result) {
@@ -63,7 +67,8 @@ Template.Boards.events({
                 throw new Meteor.Error(error)
             }
            });
-            Session.set('editedBoardId', null);    
+            Session.set('editedBoardId', null);
+            Session.set('isEditingBoard', false);    
         }
       
          
@@ -72,5 +77,6 @@ Template.Boards.events({
     'click a.cancel': function(e,t){
         e.preventDefault();
         Session.set('editedBoardId', null);
+        Session.set('isEditingBoardTitle', false);
     }
     });

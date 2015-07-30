@@ -60,5 +60,6 @@ Template.boardPage.events({
     'click a.cancel': function(e,t){
         e.preventDefault();
         Session.set('editedBoardId', null);
+        Session.set('isEditingBoardTitle', false);
     }
 });
