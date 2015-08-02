@@ -23,5 +23,8 @@ Template.AddNewBoard.events({
 		formEl.reset();
 		});
 
-	}
+	},
+
+	'click a.button-collapse':  function(){
+   $(".button-collapse").sideNav();	}
 });

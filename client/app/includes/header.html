@@ -1,20 +1,24 @@
 <template name="Header">
-	<header class="navbar navbar-inverse">
+	<nav>
+		<div class="nav-wrapper">
+		<a href="#!"><i class="mdi-action-polymer right"></i></a>
 
-		<!--Left Navigation Component-->
-		<div class="navbar-header header-left" left>
-			<a class=" navbar-board" href="/">
-				<span class="glyphicon glyphicon-th glyphicon-sm"></span>
-			</a>		
-		</div>
+			 <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
 
-		
-		<!--Account Settings & Notification-->
-		<div class="navbar-header header-right">
-			
-			{{> loginButtons}}
-			
-		</div>
-					
-	</header>
+			 <ul class="left hide-on-med-and-down">
+		        <li><a class=" navbar-board" href="/"><i class="mdi-action-dashboard"></i></a></li>		
+				<li><a href="#" class="search"><i class="mdi-action-search"></i></a></li>
+		        <li><a href="#" class="login"><i class="mdi-action-perm-identity">{{> loginButtons}}</i></a></li>
+		      </ul>
+		      <ul class="side-nav" id="mobile-menu">
+		         <li><a class=" navbar-board" href="/"><i class="mdi-action-dashboard"></i></a></li>		
+				<li><a href="#" class="search"><i class="mdi-action-search"></i></a></li>
+
+				<!-- ACCOUNT LOGIN INFORMATION -->
+		        <li><a href="#" class="login"><i class="mdi-action-perm-identity">{{> loginButtons}}</i></a></li>
+		      </ul>
+	    </div>
+  </nav>
+
+
 </template>
