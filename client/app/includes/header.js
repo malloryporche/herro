@@ -21,5 +21,8 @@ Template.Header.events({
    },
    'click a.cancel': function() {
    		return Session.set('isSearching', false);
+   },
+   'click a.dropdown-button': function() {
+   		$(".dropdown-button").dropdown();
    }
 });

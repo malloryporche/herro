@@ -20,6 +20,9 @@ a:hover
 		text-decoration: none;
 	}
 
+a.mdi-content-clear {
+	color: red;
+}
 
 /* Header & Navbar styling */
 
@@ -65,12 +68,12 @@ input.newBoard {
 			outline-color: white;
 		}
 /* BOARDS */
-a.remove {
+a.mdi-content-clear {
 	float: right;
 	color: salmon;
 	visibility: hidden;
 }
-a.remove:hover {
+a.mdi-content-clear:hover {
 	-webkit-transform: scale(2rad);
 	cursor: hand;
 }
@@ -96,7 +99,7 @@ h3.heading-4.proper {
 	}
 }
 div.boards:hover {
-	a.remove {
+	a.mdi-content-clear {
 		visibility: visible;
 	}
 }
@@ -185,7 +188,7 @@ h3.tasklist-title {
 	color: seagreen;
 	border-bottom: 1px solid black; 
 }
-.task.remove {
+.task.mdi-content-clear {
 	color: salmon;
 }
 input.AddNewCard {
@@ -201,7 +204,7 @@ input.checkbox {
 }
 
 /*   CARDS    */
-i.fa.fa-remove.remove {
+i.mdi-content-clear {
 	position: absolute;
 	right: 10px;
 	top: 10px;
@@ -213,7 +216,7 @@ div.card-body {
 	a {
 		position: absolute;
 		width: 100%;
-		i.fa.fa-remove.card.remove {
+		i.mdi-content-clear {
 			left: 193px;
 		}
 	}

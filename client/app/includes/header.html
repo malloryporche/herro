@@ -13,8 +13,11 @@
 			 <ul class="left hide-on-med-and-down">
 		        <li><a class=" navbar-board" href="/"><i class="mdi-action-dashboard"></i></a></li>		
 				<li><a href="#" class="search"><i class="mdi-action-search"></i></a></li>
-		        <li><a href="#" class="login"><i class="mdi-action-perm-identity">{{> loginButtons}}</i></a></li>
-		      </ul>
+		        <li><a href="!#" class="login dropdown-button" data-activates="login"><i class="mdi-action-perm-identity"></i></a></li>
+		        <ul id="login" class="dropdown-content">
+  					<li><a href="#!">{{>loginButtons}}</a></li>
+		        </ul>
+		        </ul>
 		      <ul class="side-nav" id="mobile-menu">
 		         <li><a class=" navbar-board" href="/"><i class="mdi-action-dashboard"></i></a></li>		
 				<li><a href="#" class="search"><i class="mdi-action-search"></i></a></li>

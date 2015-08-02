@@ -1,13 +1,11 @@
 <template name="TaskList">
-	<div class="tasklist">
+	<div class="tasklist card-panel z-depth-5">
 
 		<div class="tasklist-title">
 			
-			<h3 class="tasklist-title">{{taskListTitle}}</h3>
+			<a href="{{pathFor 'TaskList'}}"><h3 class="tasklist-title">{{taskListTitle}}</h3></a>
 		
-			<a href="#" class="tasklist-remove">
-				<i class="fa fa-remove tasklist-remove remove"></i>
-			</a>
+			<a href="#" class="mdi-content-clear"></a>
 		
 		</div>
 		
@@ -19,7 +17,7 @@
 			
 					{{else}}
 
-					<li>Sorry there are no task cards created yet</li>
+					Sorry there are no task cards created yet.
 
 				{{/each}}
 	

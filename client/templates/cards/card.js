@@ -9,7 +9,7 @@ Template.Card.events({
           conf = confirm("Are you sure you want to delete this card?");
 
           if (conf == true ) {
-
+             sAlert.success('Card successfully deleted.')
 		 // debugger
         //when remove icon is clicked
             Meteor.call('deleteCard', this._id, function( error, result) {
