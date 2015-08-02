@@ -1,6 +1,11 @@
 <template name="Header">
-	<nav>
+	<nav class="indigo">
 		<div class="nav-wrapper">
+		{{#if isSearching}}
+
+			{{> searchForm}}
+
+		{{else}}
 		<a href="#!"><i class="mdi-action-polymer right"></i></a>
 
 			 <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
@@ -17,6 +22,7 @@
 				<!-- ACCOUNT LOGIN INFORMATION -->
 		        <li><a href="#" class="login"><i class="mdi-action-perm-identity">{{> loginButtons}}</i></a></li>
 		      </ul>
+		    {{/if}}
 	    </div>
   </nav>
 
