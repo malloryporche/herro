@@ -1,8 +1,15 @@
 <template name="LoginForm">    
     <form id="LoginForm" action="action">
       <div>
+      <div class="input-field">
+      	<label for="login-email">Email</label>
         <input type="email" id="login-email" />
-        <input type="password" id="login-password" />
+      </div>
+      	<div class="input-field">
+      		<label for="login-password">Password</label>
+      		<input type="password" id="login-password" />
+      	</div>
+        
         <input type="submit" id="login-button" value="Sign in" />
      </div>
    </form> 

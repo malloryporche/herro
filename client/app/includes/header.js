@@ -1,3 +1,8 @@
+Template.Header.helpers({
+	isSearching: function() {
+		return Session.get('isSearching');
+	}
+})
 Template.Header.events({
 	
 	// Activate Side Navigation for Mobile
@@ -5,7 +10,7 @@ Template.Header.events({
    		$('.button-collapse').sideNav({
 		     menuWidth: 300, // Default is 240
 		     edge: 'left', // Choose the horizontal origin
-		     closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+		     closeOnClick: false // Closes side-nav on <a> clicks, useful for Angular/Meteor
    }
  );
    	},
@@ -13,5 +18,8 @@ Template.Header.events({
    //Toggle between ACTIVE NAVBAR and Search form
    'click a.search': function() {
    		return Session.set('isSearching', true)
+   },
+   'click a.cancel': function() {
+   		return Session.set('isSearching', false);
    }
 });
