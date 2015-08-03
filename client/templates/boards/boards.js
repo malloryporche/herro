@@ -13,9 +13,9 @@ Template.Boards.helpers({
 
 
 Template.Boards.events({
-    'click .favorites': function(e,t){
+    'click input.favorites': function(e,t){
         // code goes here
-        // debugger
+        debugger
 
         var _id = this._id,
             currentFavoriteStatus = this.favorite,

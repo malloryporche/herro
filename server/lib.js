@@ -22,7 +22,7 @@ addNewTaskList: function (value0, value1, value2, value3) {
 //prompt user to input an alternate title
 var titleExists = TaskLists.findOne({'taskListTitle': value0});
 if (titleExists) {
-        sAlert.error("error", "You already have a Tasklist with this title on this board.  Please enter a new tasklist name.")}
+        _alerts.error("error", "You already have a Tasklist with this title on this board.  Please enter a new tasklist name.")}
 else {
    var addNewTaskLists = TaskLists.insert({ 
         'taskListTitle' : value0,
@@ -31,7 +31,7 @@ else {
         'boardTitle' : value3
      });
    return addNewTaskLists;
-     _Salert("success", "Tasklist successfully created");
+     _alerts("success", "Tasklist successfully created");
    };
  },
 
@@ -42,7 +42,7 @@ deleteTaskList: function (value0) {
        _alerts("success", "Tasklist successfully deleted");
 
      if(error) {
-        _sAlert.error("error", "An error occurred while deleting this TaskList.")}
+        _alerts.error("error", "An error occurred while deleting this TaskList.")}
      },
 
 addNewCards: function(value0, value1, value2, value3, value4, value5) {
@@ -56,7 +56,7 @@ addNewCards: function(value0, value1, value2, value3, value4, value5) {
      });
    return addNewCard;
 
-   sAlert.success("You have added a new card to your tasklist entitled" + value5 +".");
+   _alerts.success("You have added a new card to your tasklist entitled" + value5 +".");
 
  },
 
@@ -68,7 +68,7 @@ updateFavorites: function(value0, value1) {
     var updateFavorites = Boards.update({'_id' : value0,},
                                         {$set: {favorite: value1}});
         return updateFavorites;
-          Salert("success", "Board successfully updated");
+          _alerts("success", "Board successfully updated");
 
         console.log(value0);
         console.log(value1);

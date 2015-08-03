@@ -1,6 +1,11 @@
 .card-panel {
 	margin: 70px 0;
 }
+.card-panel:hover {
+	h3.heading-4.proper {
+		color: white;
+	}
+}
 .container 
 	{
 	padding: 0;
@@ -90,15 +95,19 @@ h3.heading-4.proper {
 		color: lightgray;
 		text-transform: uppercase;
 }
-
+H5 {
+	text-align: center;
+	letter-spacing: 0.1em;
+	color: black;
+}
 .boards {
 	display: inline-block;
 	width: 100%;
 	border: 3px solid seagreen;
-	background-color: seagreen;
+	background-color: white;
 	color: white;
 	height: 115px;
-	margin: 10px auto;
+	margin: 30px;
 	h3 {
 		text-align: center;
 		a {
@@ -113,6 +122,9 @@ h3.heading-4.proper {
 div.boards:hover {
 	a.mdi-content-clear {
 		visibility: visible;
+	}
+	h5 {
+		color: lightgray;
 	}
 }
 .closeout {
@@ -214,7 +226,9 @@ input.AddNewCard {
 input.checkbox {
 	display: inline-block;
 }
-
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+	left: initial;
+}
 /*   CARDS    */
 i.mdi-content-clear {
 	position: absolute;
@@ -241,6 +255,6 @@ div.tasklist-body {
 
 @media (min-width: 751px) {
 	div.boards {
-		max-width: 220px;
+		max-width: 450px;
 		}
 	}
