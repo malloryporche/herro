@@ -32,7 +32,7 @@ Template.boardPage.events({
             });
     	} 
     },
-    'click a.board-title.editable': function(e,t) {
+    'click a.mdi-editor-mode-edit': function(e,t) {
 
       debugger
       e.preventDefault();

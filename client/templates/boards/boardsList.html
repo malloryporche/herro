@@ -2,7 +2,7 @@
 
 		{{> AddNewBoard }}
 
-		<div class="card-panel z-depth-4 indigo hoverable">
+		<div class="card-panel z-depth-4 hoverable">
 			<h3 class="heading-4 proper">
 				<i class="mdi-action-favorite-outline">	
 			</i> Favorite Boards</h3>	
@@ -18,7 +18,7 @@
 					<h4 class="notification">Sorry there are no starred boards yet</h4>
 
 			{{/each}}
-<div class="card-panel z-depth-4 indigo hoverable">
+<div class="card-panel z-depth-4 hoverable">
 		<h3 class="heading-4 proper">Recent Boards</h3>
 </div>
 	
@@ -27,9 +27,13 @@
 
 				{{> Boards}}
 
+				{{else}}
+
+					<h4 class="notification">Sorry there are no recent boards.</h4>
+
 			{{/each}}
 
-<div class="card-panel z-depth-4 indigo hoverable">
+<div class="card-panel z-depth-4 hoverable">
 	<h3 class="heading-4 proper">My Boards</h3>
 </div>
 	
@@ -37,6 +41,10 @@
 			{{#each boards}}
 
 				{{> Boards}}
+
+				{{else}}
+
+					<h4 class="notification">Create your first board!</h4>
 
 			{{/each}}
 

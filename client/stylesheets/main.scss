@@ -3,7 +3,7 @@
 }
 .card-panel:hover {
 	h3.heading-4.proper {
-		color: white;
+		color: Black;
 	}
 }
 .container 
@@ -95,7 +95,7 @@ h3.heading-4.proper {
 		color: lightgray;
 		text-transform: uppercase;
 }
-H5 {
+h5 {
 	text-align: center;
 	letter-spacing: 0.1em;
 	color: black;
@@ -114,7 +114,7 @@ H5 {
 			font-size: 22px;
 			text-transform: uppercase;
 			letter-spacing: 0.1em;
-			color: white;
+			color: red;
 			margin: 0 auto;
 		}
 	}
@@ -124,7 +124,7 @@ div.boards:hover {
 		visibility: visible;
 	}
 	h5 {
-		color: lightgray;
+		color: gray;
 	}
 }
 .closeout {
@@ -226,8 +226,9 @@ input.AddNewCard {
 input.checkbox {
 	display: inline-block;
 }
-[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+input[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
 	left: initial;
+	color: red;
 }
 /*   CARDS    */
 i.mdi-content-clear {

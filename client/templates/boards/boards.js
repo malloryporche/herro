@@ -24,7 +24,6 @@ Template.Boards.events({
 
         // set this._id to the opposite of whatever favorites is stored as in collection
         if ( checked ) {
-            sAlert('success', 'This board has been updated.');
         	Meteor.call('updateFavorites', _id, updatedFavoriteStatus, function( error, result) { 
              if (error) {
                throw new Meteor.Error(error);
@@ -32,7 +31,7 @@ Template.Boards.events({
             });
     	} 
     },
-    'click .mdi-content-clear': function(e, t){
+    'click .mdi-action-delete': function(e, t){
         var board = e.currentTarget,
             conf = confirm("Are you sure you want to delete this board?");
         // debugger
@@ -50,15 +49,17 @@ Template.Boards.events({
         }
     },
 
-    'click a.edit-board-title': function(e,t){
+    'click a.mdi-editor-mode-edit': function(e,t){
         //when edit icon is clicked
-        // debugger
+        debugger
         e.preventDefault();
         Session.set('editedBoardId', this._id);
         Session.set('isEditingBoardTitle', true);
     },
     'submit form.edit-title': function(e,t){
-        // debugger
+        debugger
+        Session.set('editedBoardId', null);
+        Session.set('isEditingBoard', false);   
         e.preventDefault();
         
         
@@ -71,8 +72,7 @@ Template.Boards.events({
 
             });
            }
-            Session.set('editedBoardId', null);
-            Session.set('isEditingBoard', false);    
+            
     },
       
          
