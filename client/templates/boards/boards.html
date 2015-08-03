@@ -1,16 +1,38 @@
 <template name="Boards">
-	<div class="boards">
+	
+	<div class="boards boards-placement card-panel hover z-depth-3">
+
 
 		<a herf="#" class="edit"><i class="fa fa-edit"></i></a>
 		<a herf="#" class="remove"><i class="fa fa-remove"></i></a>
+
 		{{favortite}}
+
 		<input type="checkbox" class="favorites glyphicon glyphicon-star-empty">
+
+		<a herf="#" class="edit-board-title"><i class="fa fa-edit"></i></a>
+
 		
+		<a herf="#" class="mdi-content-clear"></a>
+		<input type="checkbox" class="favorites {{#if favorite}} mdi-action-favorite {{else }} mdi-action-favorite-outline
+		{{/if }}">
 		<h3>
-			<a href="{{pathFor 'boardPage'}}">{{boardTitle}}</a>
+
+		{{#if isEditingBoardTitle}}
+			<form class="edit-title">
+				<input name="revisedTitle" type="text" value="{{boardTitle}}">
+				<a class="cancel" href="#"><i class="fa fa-remove"></i></a>
+			</form>
+				{{else}}
+				<div class="valign-wrapper">
+					<a href="{{pathFor 'boardPage'}}">{{boardTitle}}</a>
+				</div>
+			
+		{{/if}}
 		</h3>
 
 
 	
 	</div>
+
 </template>

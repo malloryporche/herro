@@ -1,16 +1,36 @@
 <template name="BoardsList">
 
-		<h3 class="heading-4 proper">Starred Boards</h3>	
+		{{> AddNewBoard }}
 
+		<div class="card-panel z-depth-4 indigo">
+			<h3 class="heading-4 proper">Starred Boards</h3>	
+		</div>
 
+		
+		
 			{{#each starredBoards}}
+					{{> Boards}}
+				
+					{{else}}
+
+					<h4 class="notification">Sorry there are no starred boards yet</h4>
+
+			{{/each}}
+<div class="card-panel z-depth-4 indigo">
+		<h3 class="heading-4 proper">Recent Boards</h3>
+</div>
+	
+
+			{{#each recentBoards}}
 
 				{{> Boards}}
 
 			{{/each}}
 
-
-		<h3 class="heading-4 proper">My Boards</h3>
+<div class="card-panel z-depth-4 indigo">
+	<h3 class="heading-4 proper">My Boards</h3>
+</div>
+	
 
 			{{#each boards}}
 

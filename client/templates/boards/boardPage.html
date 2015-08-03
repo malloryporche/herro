@@ -1,16 +1,27 @@
 <template name="boardPage">
 	
 	<div class="heading">
-	
-		<h2 class="board-title">
+		
+		{{> Favorite}}
+
+		{{#if isEditingBoardTitle}}
+			<form class="edit-title">
+				<input name="revisedTitle" type="text" value="{{boardTitle}}">
+				<a class="cancel" href="#"><i class="mdi-content-clear"></i></a>
+			</form>
+			{{else}}
+		<a href="#" class="board-title editable"><h2 id="boardTitle" class="board-title editable">
 
 			{{boardTitle}}
-	
+		</h2></a>
+		{{/if}}
+		<div class="board-input">
+
 			{{> addNewTaskLists}} 
 
-		</h2>
-
 		</div>
+	
+	</div>
 		
 		{{#each tasklists}}
 

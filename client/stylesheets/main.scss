@@ -1,6 +1,12 @@
+.card-panel {
+	margin: 70px 0;
+}
 .container 
 	{
 	padding: 0;
+	max-width: none;
+	width: 100%;
+	margin: 0;
 
 	}
 section#main 
@@ -17,6 +23,9 @@ a:hover
 		text-decoration: none;
 	}
 
+a.mdi-content-clear {
+	color: red;
+}
 
 /* Header & Navbar styling */
 
@@ -31,59 +40,57 @@ header {
 	a:hover {
 		color: salmon;
 		text-decoration: none;
-	}
-	form {
-		display: inline-block;
-		input {
-			background-color: #222;
-			color: salmon;
-			width: 300px;
-			border: none;
-			border-bottom: 1px solid salmon;
-			text-transform: uppercase;
-			letter-spacing: 0.15em;
-		}
-		input:focus {
-			border: none;
-			border-bottom: 1px solid seagreen;
-			outline-offset: 0;
-			outline-color: #222;
-		}
-	}
+	}	
 }
-
 div.navbar-header {
 	display: inline-block;
+}
+div.navbar-header:hover {
+	h3.heading-4-proper {
+		color: white;
+	}
 }
 
 div.navbar-header.header-right {
 		float: right;
 	}
 
-
-/* LOGIN BUTTONS */
-div#login-buttons.login-buttons-dropdown-align- {
-	cursor: pointer;
-}
-div {
-	a#login-name-link.login-link-text {
-		color: #ddd;
-
-	}
+i.board-page-faves {
+	float: left;
+	left: -450px;
 }
 
+input.newBoard {
+			color: salmon;
+			width: 100%;
+			max-width: 300px;
+			border: none;
+			border-bottom: 1px solid salmon;
+			text-transform: uppercase;
+			letter-spacing: 0.15em;
+		}
+		input.newBoard:focus {
+			border: none;
+			border-bottom: 1px solid seagreen;
+			outline-offset: 0;
+			outline-color: white;
+		}
 /* BOARDS */
-a.remove {
+a.mdi-content-clear {
 	float: right;
 	color: salmon;
 	visibility: hidden;
 }
+a.mdi-content-clear:hover {
+	-webkit-transform: scale(2rad);
+	cursor: hand;
+}
 h3.heading-4.proper {
 		text-align: left;
-		color: black;
-		background: white;
+		color: lightgray;
 		text-transform: uppercase;
 }
+
 .boards {
 	display: inline-block;
 	width: 100%;
@@ -95,40 +102,65 @@ h3.heading-4.proper {
 	h3 {
 		text-align: center;
 		a {
+			font-size: 22px;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
 			color: white;
-		}
-	}
-	&:hover {
-		a.remove {
-			visibility: visible;
-			cursor: pointer;
+			margin: 0 auto;
 		}
 	}
 }
-.glyphicon:before {
+div.boards:hover {
+	a.mdi-content-clear {
+		visibility: visible;
+	}
+}
+.closeout {
+	text-align: right;
+	display: block;
+	position: fixed;
+	right: 25px;
+}
+.favorites .boardPage {
+
+}
+.favorites:before {
 	visibility: visible;
 }
-.glyphicon.glyphicon-star-empty:checked:before {
-	content: "\e006";
+.favorites.fa.fa-star:checked:before {
+	content: "\f005";
 }
-input[type=checkbox].glyphicon{
+input[type=checkbox].favorites.fa.fa-star, input[type=checkbox].favorites.fa.fa-star-o{
 	visibility: hidden;
 }
 span.boardStar {
 	color: white;
 	padding: 0 0 7px 7px;
+
 }
 /* BOARD TITLE */
 h2.board-title {
 	text-align: left;
+	width: 50%;
+	display: inline-block;
+	float: left;
+}
+div.board-input {
+	width: 48%;
+	display: inline-block;
 }
 .heading {
 	text-transform: uppercase;
 	letter-spacing: 0.25em;
 	text-align: center;
-	padding: 0;
+	padding: 0 0 20px 0;
 	border-bottom: 2px solid black;
 	margin-bottom: 30px;
+	input:first-of-type {
+		float: left;
+		margin: 20px 20px 20px 0;
+		font-size: 20px;
+	}
 }
 h2.board-title 	input {
 	float: right;
@@ -152,7 +184,6 @@ h2.board-title 	input {
 	margin: 3px;
 	padding: 0 5px 5px 5px;
 	.remove {
-		position: absolute;
 		float: right;
 		top: 0;
 	}
@@ -169,7 +200,7 @@ h3.tasklist-title {
 	color: seagreen;
 	border-bottom: 1px solid black; 
 }
-.task.remove {
+.task.mdi-content-clear {
 	color: salmon;
 }
 input.AddNewCard {
@@ -185,38 +216,31 @@ input.checkbox {
 }
 
 /*   CARDS    */
-i.fa.fa-remove.remove {
-	position: relative;
+i.mdi-content-clear {
+	position: absolute;
 	right: 10px;
 	top: 10px;
 }
-div.tasklist-title a.tasklist-remove i.fa.fa-remove.remove {
-	position: absolute;
-	color: seagreen;
-	visibility: hidden;
-}
-.card {
+div.card-body {
 	h4 {
 		display: inline-block;
 	}
 	a {
-		position: relative;
-		right: 0;
-		color: salmon;
-	}
-	div.card:hover {
-		div.tasklist-title a.tasklist-remove i.fa.fa-remove.remove {
-			visibility: visible;
+		position: absolute;
+		width: 100%;
+		i.mdi-content-clear {
+			left: 193px;
 		}
 	}
 }
-div.card-body {
+div.tasklist-body {
 	display: block;
+	padding-top: 60px;
 	background-color: white;
 }
 
 @media (min-width: 751px) {
-	.boards {
-			max-width: 220px;
+	div.boards {
+		max-width: 220px;
+		}
 	}
-}
