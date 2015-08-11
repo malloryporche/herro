@@ -1,0 +1,48 @@
+/* Header & Navbar styling */
+
+
+header {
+	padding: 10px;
+	a {
+		color: white;
+		margin: 7px;
+		text-decoration: none;
+	}
+	a:hover {
+		color: salmon;
+		text-decoration: none;
+	}	
+}
+div.navbar-header {
+	display: inline-block;
+}
+div.navbar-header:hover {
+	h3.heading-4-proper {
+		color: white;
+	}
+}
+
+div.navbar-header.header-right {
+		float: right;
+	}
+
+i.board-page-faves {
+	float: left;
+	left: -450px;
+}
+
+input.newBoard {
+			color: salmon;
+			width: 100%;
+			max-width: 300px;
+			border: none;
+			border-bottom: 1px solid salmon;
+			text-transform: uppercase;
+			letter-spacing: 0.15em;
+		}
+		input.newBoard:focus {
+			border: none;
+			border-bottom: 1px solid seagreen;
+			outline-offset: 0;
+			outline-color: white;
+		}

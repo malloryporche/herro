@@ -1,0 +1,134 @@
+/*/*
+**
+*** Options
+**
+*/
+
+// Font Family
+
+$font_default: "Arial";
+
+// Color Scheme
+
+// Theme Colors 
+$primary: #343434;  // soft black
+$secondary: salmon; // salmon duh!
+$tertiary: gainsboro; //
+$quadrant: aliceblue; // 
+$fracture: dodgerblue; // 
+
+// Basic Colors
+$white: #FFF; // white
+$black: #343434; // soft black
+
+// Create a map for your theme
+$theme_default: (
+	primary: $primary,
+	secondary: $secondary,
+	tertiary: $tertiary,
+	quadrant: $quadrant,
+	fracture: $fracture,
+	white: $white,
+	black: $black
+);
+
+$theme: $theme_default;
+
+@function themeColor($key) {
+	$val: map-get($theme, $key);
+	@return $val;
+}
+
+// General
+
+html {
+	font-family: $font_default;
+	font-size: 16px;
+	color: themeColor(black);
+}
+
+html, body { height: 100%; width: 100%; margin: 0; }
+
+// main { padding-left: 10px; }
+div.container {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	max-width: none;
+}
+
+// Text
+
+h1
+{
+	font-size: 1.5em;
+	font-weight: 300;
+	letter-spacing: 2px;
+}
+
+h2 
+{
+	font-size: 1em;
+	font-weight: 300;
+	margin: 0;
+}
+
+// Links
+
+a {
+	text-decoration: none;
+	color: #00b2f3;
+}
+/*
+// Accounts-Ui
+#login-buttons {
+    float: left;
+    padding-top: 1em;
+}*/
+
+// Colors
+
+.red {
+	color: red !important; // Use !important for classes used for js overrides 
+}
+
+// Utilities
+
+#hidden, .hidden  {
+	display: none;
+}
+
+#hideBefore:before, .hideBefore:before, #hideAfter:after, .hideAfter:after {
+	content: none !important;
+}
+
+.switch {
+	&:before {
+		content: '';
+		display: block;
+		height: 62px;
+		width: 120px;
+		position: absolute;
+		background-color: $white;
+		z-index: 1;
+		transition: all 0.3s ease;
+		top: 0;
+		left: 0;
+	}
+	&:hover:before {
+		opacity: 0;
+		display: none;
+	}
+}
+
+[class$="Active"] {
+	// revert things back to normal behavior when active
+	pointer-events: auto !important; // Use !important for classes used for js overrides 
+	cursor: auto !important; 
+}
+
+/*@mixin fadein {
+    animation: fadein 2s;
+    -moz-animation: fadein 2s;  Firefox 
+    -webkit-animation: fadein 2s; /* Safari and Chrome 
+    -o-animation: fadein 2s;*/ /* Opera */

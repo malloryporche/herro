@@ -1,0 +1,14 @@
+
+/* BOARDS */
+.boardShortcut {
+	h6 {
+		padding: 0;
+	}
+	ul li{
+	display: inline-block;
+	&:last-of-type{
+		padding: 0 0 0 15px;
+	}
+}
+}
+	

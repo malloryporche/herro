@@ -1,0 +1,13 @@
+/* Mobile Menu styling */
+ul#mobile-menu.side-nav 
+	{
+	display: inline-block;
+	h6, i {
+		display: inline-block;
+		color: gray;
+	}
+	width: 450px;
+}
+#mobile-menu li.mdi-action-search.left {
+	width: 100%;
+}

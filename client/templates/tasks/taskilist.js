@@ -9,8 +9,9 @@ Template.TaskList.events({
           conf = confirm("Are you sure you want to delete this tasklist?");
 
           if (conf == true ) {
-             // debugger
-        //when remove icon is clicked
+
+            sAlert.success('Tasklist successfully deleted.');
+
               Meteor.call('deleteTaskList', this._id, function( error, result) {
             if (error) {
                     throw new Meteor.Error(error);

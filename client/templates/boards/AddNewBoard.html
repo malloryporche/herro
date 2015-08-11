@@ -2,7 +2,11 @@
 	{{#if isAddingNewBoard}}
 
 		<form class="add-board">
+		<div class="input-field">
 			<input type="text" name="addNewBoard" class="newBoard" value="{{name}}" placeholder="New Board">
+			<label for="addNewBoard">Board Name</label>
+		</div>
+			
 			<a href="#" class="cancel"><i class="fa fa-remove"></i></a>
 		</form>
 		{{else}}

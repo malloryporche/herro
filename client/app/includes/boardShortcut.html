@@ -1,24 +1,32 @@
-<template name="Boards">
-	
-	<div class="boards boards-placement card-panel hoverable z-depth-3">
-		
+<template name="boardShortcut">
+
+	<div class="boardShortcut card-panel hoverable z-depth-3">
 
 		{{#if isEditingBoardTitle}}
+
 			<form class="edit-title">
 				<input name="revisedTitle" type="text" value="{{boardTitle}}">
 				<a class="cancel" href="# mdi-content-remove"></a>
 			</form>
+
 		{{else}}
 
-			 
+			<h6><a href="{{pathFor 'boardPage'}}">{{boardTitle}}</a></h6>
+
 			<ul>
-				<li><h5> <a href="{{pathFor 'boardPage'}}">{{boardTitle}}</a></h5></li>
 				<li><input type="checkbox" class="favorites {{#if favorite}} mdi-action-favorite {{else }} mdi-action-favorite-outline
-			{{/if }}"></li>
+		{{/if }}"></li>
 				<li><a herf="#" class="mdi-editor-mode-edit"></a></li>
 				<li><a href="#" class="delete mdi-action-delete"></a></li>
 			</ul>
+			
 		{{/if}}
+
+		
+		
+		
+
+	
 		
 
 

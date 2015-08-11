@@ -4,7 +4,8 @@ addNewBoards: function (value0, value1, value2) {
         'boardTitle': value0, 
         'timestamp': value1, 
         'boardId': value2, 
-        'favorite': false
+        'favorite': false,
+        'ownerId' : Meteor.userId()
     });
    return addNewBoards;
  },
@@ -72,8 +73,7 @@ updateFavorites: function(value0, value1) {
 
         console.log(value0);
         console.log(value1);
-    
-    return updateFavorites;
+
 },
 updateBoardTitle: function(value0, value1) {
     var updateBoardTitle = Boards.update({'_id': value0,},

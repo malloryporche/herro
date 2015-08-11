@@ -10,16 +10,22 @@
 				<a class="cancel" href="#"><i class="mdi-content-clear"></i></a>
 			</form>
 			{{else}}
-		<a href="#" class="board-title editable"><h2 id="boardTitle" class="board-title editable">
+	
+			
+			<div class="card-panel">
+					<a href="#" class="board-title editable">
+						<h2 id="boardTitle" class="board-title editable">{{boardTitle}}</h2>
+					</a>
+			
+				<div class="board-input">
 
-			{{boardTitle}}
-		</h2></a>
-		{{/if}}
-		<div class="board-input">
+					{{> addNewTaskLists}} 
 
-			{{> addNewTaskLists}} 
+				</div>
 
-		</div>
+			</div>
+		
+			{{/if}}
 	
 	</div>
 		

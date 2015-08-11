@@ -1,16 +1,25 @@
 Template.Header.helpers({
 	isSearching: function() {
 		return Session.get('isSearching');
-	}
+	},
+   starredBoards: function() {
+      return Boards.find({'favorite': true})
+   },
+   recentBoards: function(limit) {
+      return Boards.find({}, {
+         limit: limit || 5,
+         sort: { timestamp: -1 },
+          });
+   }
 })
 Template.Header.events({
 	
-	// Activate Side Navigation for Mobile
+	// Activate Slide Navigation for Mobile
 	'click a.button-collapse': function(e,t) {
    		$('.button-collapse').sideNav({
 		     menuWidth: 300, // Default is 240
 		     edge: 'left', // Choose the horizontal origin
-		     closeOnClick: false // Closes side-nav on <a> clicks, useful for Angular/Meteor
+		     closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
    }
  );
    	},

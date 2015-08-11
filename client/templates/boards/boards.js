@@ -59,9 +59,10 @@ Template.Boards.events({
     'submit form.edit-title': function(e,t){
         debugger
         Session.set('editedBoardId', null);
-        Session.set('isEditingBoard', false);   
+        Session.set('isEditingBoardTitle', false);   
         e.preventDefault();
         
+        sAlert.success('Board successfully edited.');
         
         var revisedTitle = t.$('input[name="revisedTitle"]').val();
         if (revisedTitle.length) {
