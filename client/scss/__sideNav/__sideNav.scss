@@ -8,6 +8,35 @@ ul#mobile-menu.side-nav
 	}
 	width: 450px;
 }
+#mobile-menu {
+	a {
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
 #mobile-menu li.mdi-action-search.left {
 	width: 100%;
+}
+
+input.favorites.mdi-action-favorite, input.favorites.mdi-action-favorite-outline:not-checked {
+	position: relative;
+	left: 0;
+	i {
+		color: red;
+		visibility: visible;
+	}
+}
+.mdi-action-favorite:before, .mdi-action-favorite-outline:before {
+	color: red;
+	visibility: visible;
+}
+
+.side-nav li, .side-nav a {
+	padding: 2px 7px;
+}
+
+input[type="checkbox"]:not(:checked), input[type="checkbox"]:checked {
+	position: relative;
+	left: 0;
 }
