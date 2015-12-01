@@ -1,11 +1,9 @@
-Template.AddNewBoard.helpers({
-	isAddingNewBoard: function(){
-		return Session.get('isCreatingBoard')
-	}
+Template.CreateNewBoard.helpers({
+
 });
 
 
-Template.AddNewBoard.events({
+Template.CreateNewBoard.events({
 	'click a.create-board': function(e,t){
 		e.preventDefault();
 		Session.set('isCreatingBoard', true);

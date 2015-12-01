@@ -1,17 +1,7 @@
 Template.Header.helpers({
-	isSearching: function() {
-		return Session.get('isSearching');
-	},
-   starredBoards: function() {
-      return Boards.find({'favorite': true})
-   },
-   recentBoards: function(limit) {
-      return Boards.find({}, {
-         limit: limit || 5,
-         sort: { timestamp: -1 },
-          });
-   }
-})
+
+});
+
 Template.Header.events({
 	
 	// Activate Slide Navigation for Mobile
@@ -25,13 +15,14 @@ Template.Header.events({
    	},
 
    //Toggle between ACTIVE NAVBAR and Search form
-   'click a.search': function() {
+   'click i.mdi-action-search': function() {
    		return Session.set('isSearching', true)
    },
-   'click a.cancel': function() {
-   		return Session.set('isSearching', false);
-   },
-   'click a.dropdown-button': function() {
+   'click i.mdi-content-add': function() {
    		$(".dropdown-button").dropdown();
+   },
+   'click a.create-board': function() {
+
+   		return Session.set('isCreatingBoard', true);
    }
 });

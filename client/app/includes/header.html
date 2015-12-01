@@ -8,10 +8,16 @@
 			{{> searchForm}}
 
 		{{else}}
+		
+			{{#if isCreatingNewBoard}}
 
+				{{> createBoard}}
+
+			{{else}}
 		<!-- LEFT-ALIGNED NAVBAR ACTIONS -->
 			<ul class="left">
-				<li><a href="#" data-activates='mobile-menu' class="button-collapse"><i class="mdi-action-dashboard"></i></a></li>
+				<li><a href="#" data-activates='mobile-menu' class=""><i class="mdi-action-dashboard"></i></a></li>
+				
 				<li><a href="#"><i class="mdi-action-search"></i></a></li>
 			</ul>
 			
@@ -26,7 +32,7 @@
 					<a href="#"><i class="mdi-content-add dropdown-button" data-activates="mobileCreate"></i></a>
 				</li>
 					<ul id="mobileCreate" class="dropdown-content">
-						<li><a href="#">Create Board...</a></li>
+						<li><a href="#" class="create-board">Create Board...</a></li>
 						<li><a href="#">Create Personal Organization...</a></li>
 						<li><a href="#">Create Business Organization...</a></li>
 
@@ -71,7 +77,7 @@
 		      </ul>
 
 		    {{/if}}
-
+			{{/if}}
 	    </div>
 	</nav>
 </template>

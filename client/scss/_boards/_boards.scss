@@ -1,25 +1,13 @@
 
 /* BOARDS */
-.boardShortcut {
-	h6 {
-		padding: 0;
-		a {
-			padding: 0;
-		}
+
+.boards-placement.card-panel {
+	width: 350px;
+	margin: 20px auto;
+	h5 {
+		display: inline-block;
 	}
 	ul {
-		float: right;
-		width: 50%;
-		li {
-			display: inline-block;
-			&:last-of-type {
-				padding: 0 0 0 15px;
-			}
+		display: inline-block;
 	}
-	.card-panel {
-		padding: 0;
-		background-color: #fee;
 	}
-}
-}
-	

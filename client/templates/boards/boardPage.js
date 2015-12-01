@@ -1,19 +1,9 @@
 Template.boardPage.helpers({
-	tasklists: function() {
-		return Tasklists.find();
-	},
-	favorite: function(){
-        if ( this.favorite ) {
-            return true;
-        } else {
-            return false;
-        }
-    },
-    isEditingBoardTitle: function() {
-    return Session.get('isEditingBoardTitle')
-  }
+	boardTitle: function() {
+  return Session.get('this.boardTitle')
   
-})
+}
+});
 
 
 Template.boardPage.events({

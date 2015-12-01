@@ -16,9 +16,6 @@ Template.addNewTaskLists.events({
 			boardTitle = this.boardTitle;
 
 
-			debugger
-
-
 		//Call Add new task list method on the server
 		Meteor.call('addNewTaskList', 
 					taskListTitle, 
@@ -27,12 +24,12 @@ Template.addNewTaskLists.events({
 					boardTitle, 
 					function( error, result) { 
 
-			//App notifications 
-			// if (error) {
-			// 	sAlert.error("You have been unsuccessful in your pursuits.");
-			//  else
-   //           sAlert.success("You have successfully created a tasklist entitled " + taskListTitle + " .")
-			// }
+			// App notifications 
+			if (error) {
+				sAlert.error("You have been unsuccessful in your pursuits."); }
+			 else {
+             sAlert.success("You have successfully created a tasklist entitled " + taskListTitle + " .")
+			}
 		//Reset form
 		formElement.reset();
 

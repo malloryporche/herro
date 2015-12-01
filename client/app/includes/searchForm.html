@@ -1,0 +1,21 @@
+<template name="searchForm">
+	<form>
+		<input type='search' id='search' placeholder='Find boards here...' value='{{search}}'>
+		<i class="mdi-action-remove"></i>
+	</form>
+
+		{{#if search}}
+
+		<div class="search-results">
+			<h3>Search Results</h3>
+				<div class="list-items">
+				{{#each searchResults}}
+					<div class="list-items">
+						{{text}}
+					</div>
+				{{/each}}
+				</div>
+		</div>
+	{{/if}}
+
+</template>

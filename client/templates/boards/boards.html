@@ -10,9 +10,9 @@
 			</form>
 		{{else}}
 
+			 <h5> <a href="{{pathFor 'boardPage'}}">{{boardTitle}}</a></h5>
 			 
-			<ul>
-				<li><h5> <a href="{{pathFor 'boardPage'}}">{{boardTitle}}</a></h5></li>
+			<ul class="board-actions">
 				<li><input type="checkbox" class="favorites {{#if favorite}} mdi-action-favorite {{else }} mdi-action-favorite-outline
 			{{/if }}"></li>
 				<li><a herf="#" class="mdi-editor-mode-edit"></a></li>

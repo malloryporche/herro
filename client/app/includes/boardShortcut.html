@@ -10,27 +10,18 @@
 			</form>
 
 		{{else}}
-
-			<h6><a href="{{pathFor 'boardPage'}}">{{boardTitle}}</a></h6>
-
+			
 			<ul>
-				<li><input type="checkbox" class="favorites {{#if favorite}} mdi-action-favorite {{else }} mdi-action-favorite-outline
-		{{/if }}"></li>
+				<li>
+					<h6><a href="{{pathFor 'boardPage'}}">{{boardTitle}}</a></h6>
+				</li>
+				<li><input type="checkbox" class="favorites {{#if favorite}} mdi-action-favorite {{else }} mdi-action-favorite-outline {{/if }}"></li>
 				<li><a herf="#" class="mdi-editor-mode-edit"></a></li>
 				<li><a href="#" class="delete mdi-action-delete"></a></li>
 			</ul>
 			
 		{{/if}}
-
 		
-		
-		
-
-	
-		
-
-
-	
 	</div>
 
 </template>

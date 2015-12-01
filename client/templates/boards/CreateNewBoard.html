@@ -1,16 +1,16 @@
-<template name="AddNewBoard">
-	{{#if isAddingNewBoard}}
+<template name="CreateNewBoard">
+	{{#if isCreatingBoard}}
 
 		<form class="add-board">
 		<div class="input-field">
 			<input type="text" name="addNewBoard" class="newBoard" value="{{name}}" placeholder="New Board">
 			<label for="addNewBoard">Board Name</label>
+			<a href="#" class="cancel"><i class="mdi-action-remove"></i></a>
 		</div>
-			
-			<a href="#" class="cancel"><i class="fa fa-remove"></i></a>
 		</form>
+		
 		{{else}}
-			<a href="#" class="create-board btn wave-effect effect-light">Create Board</a>
+			
 		{{/if}}
 		
 </template>
