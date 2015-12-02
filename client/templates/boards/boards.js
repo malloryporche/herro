@@ -15,7 +15,7 @@ Template.Boards.helpers({
 Template.Boards.events({
     'click input.favorites': function(e,t){
         // code goes here
-        debugger
+        // debugger
 
         var _id = this._id,
             currentFavoriteStatus = this.favorite,
@@ -51,7 +51,7 @@ Template.Boards.events({
 
     'click a.mdi-editor-mode-edit': function(e,t){
         //when edit icon is clicked
-        debugger
+        // debugger
         e.preventDefault();
         Session.set('editedBoardId', this._id);
         Session.set('isEditingBoardTitle', true);

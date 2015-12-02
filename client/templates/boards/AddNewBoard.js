@@ -25,7 +25,8 @@ Template.CreateNewBoard.events({
 			boardId = this._id,
 			formElement = t.find('form');
 
-			debugger
+			// debugger
+
 		//Method call to append board id to taskListId
 		Meteor.call('addNewBoards', boardTitle, timestamp, boardId, function( error, result) { 
              if (error) {
@@ -35,7 +36,8 @@ Template.CreateNewBoard.events({
 		//Clear form
 		formElement.reset();
 		Session.set('isCreatingBoard', false);
-		debugger
+		
+		// debugger
 		});
 
 }
