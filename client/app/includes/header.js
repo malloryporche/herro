@@ -18,6 +18,9 @@ Template.Header.events({
    'click i.mdi-action-search': function() {
    		return Session.set('isSearching', true)
    },
+   'click i.mdi-content-clear': function() {
+         return Session.set('isSearching', false)
+   },
    'click i.mdi-content-add': function() {
    		$(".dropdown-button").dropdown();
    },
