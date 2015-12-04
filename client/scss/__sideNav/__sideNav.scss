@@ -2,6 +2,9 @@
 ul#mobile-menu.side-nav 
 	{
 	display: inline-block;
+	li {
+		display: inline-block;
+	}
 	h6, i {
 		display: inline-block;
 		color: gray;

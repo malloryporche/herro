@@ -14,13 +14,40 @@
 				{{> createBoard}}
 
 			{{else}}
+
 		<!-- LEFT-ALIGNED NAVBAR ACTIONS -->
 			<ul class="left">
-				<li><a href="#" data-activates='mobile-menu' class=""><i class="mdi-action-dashboard"></i></a></li>
+				<li><a href="#" data-activates='mobile-menu' class="left button-collapse"><i class="mdi-action-dashboard"></i></a></li>
 				
 				<li><a href="#"><i class="mdi-action-search"></i></a></li>
 			</ul>
 			
+			<!--Slide out menu-->
+
+			<ul class="side-nav" id="mobile-menu">
+		         <li class="mdi-action-search left"><input type="text" placeholder="Search boards by name..."></li>		
+				<h6><i class="mdi-action-favorite-outline"></i> Favorite Boards</h6>
+
+				{{#each starredBoards}}
+					{{> sideNavboardShortcut}}
+				
+					{{else}}
+
+						<h4 class="notification">Sorry there are no starred boards yet</h4>
+
+					{{/each}}
+
+					 <li><i class="mdi-action-history"></i><h6>Recent Boards</h6></li>
+
+				{{#each recentBoards}}
+						{{> sideNavboardShortcut}}
+				{{else}}
+
+					<h4 class="notification">Sorry there are no recent boards.</h4>
+
+				{{/each}}
+
+		      </ul>
 
 			<!-- BRAND LOGO -->
 			<a href="/" class="brand-logo center">Yello</a>
@@ -35,11 +62,12 @@
 						<li><a href="#" class="create-board">Create Board...</a></li>
 						<li><a href="#">Create Personal Organization...</a></li>
 						<li><a href="#">Create Business Organization...</a></li>
-
 					</ul>
+
 				<li>
 					<a href="#" class="dropdown-button" data-activates="mobileAccountInfo"><i class="mdi-action-account-box"></i></a>
 				</li>
+
 					<ul id="mobileAccountInfo" class="dropdown-content">
 						<li><a href="#" class="dropdown-content">{{> loginButtons}}</a></li>
 						<li><a href="#">View Profile</a></li>
@@ -51,30 +79,7 @@
 			</ul>
 
 
-		      <ul class="side-nav" id="mobile-menu">
-		         <li class="mdi-action-search left"><input type="text" placeholder="Search boards by name..."></li>		
-				<h6><i class="mdi-action-favorite-outline"></i> Favorite Boards</h6>
-
-				{{#each starredBoards}}
-					{{> boardShortcut}}
-				
-					{{else}}
-
-						<h4 class="notification">Sorry there are no starred boards yet</h4>
-
-					{{/each}}
-
-					 <li><i class="mdi-action-history"></i><h6>Recent Boards</h6></li>
-
-				{{#each recentBoards}}
-						{{> boardShortcut}}
-				{{else}}
-
-					<h4 class="notification">Sorry there are no recent boards.</h4>
-
-				{{/each}}
-
-		      </ul>
+		      
 
 		    {{/if}}
 			{{/if}}

@@ -1,6 +1,12 @@
 /* Header & Navbar styling */
 nav {
 	margin-bottom: 20px;
+	form {
+		padding: 0 0 0 20px;
+		i.mdi-content-clear {
+			display: inline-block;
+		}
+	}
 }
 
 header {
@@ -33,7 +39,7 @@ i.board-page-faves {
 	left: -450px;
 }
 
-i.mdi-content-clear {
+ nav i.mdi-content-clear.active {
 	display: inline-block;
 }
 input.newBoard {
@@ -53,5 +59,6 @@ input.newBoard {
 		}
 
 input#search {
-	width: 95%;
+	width: 90%;
+	padding: 0 20px 0 20px;
 }
