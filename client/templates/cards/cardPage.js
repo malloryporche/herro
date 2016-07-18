@@ -1,5 +1,5 @@
 Template.CardPage.helpers({
-	boardTitle: function() {
+	CardTitle: function() {
 		return this.Boards.title()
 	}
 })

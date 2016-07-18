@@ -11,7 +11,7 @@ addNewBoards: function (value0, value1, value2) {
  },
 deleteBoards: function (value0) {
      return  Boards.remove({ '_id': value0});
-     _sAlerts.success("success", "Board successfully deleted");
+     _sAlerts.success("success", "Board entitled " + value0 + " successfully deleted");
 
  },
 

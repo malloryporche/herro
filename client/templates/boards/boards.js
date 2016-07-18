@@ -31,10 +31,10 @@ Template.Boards.events({
             });
     	} 
     },
-    'click .mdi-action-delete': function(e, t){
+    'click .mdi-content-clear': function(e, t){
         var board = e.currentTarget,
             conf = confirm("Are you sure you want to delete this board?");
-        // debugger
+        debugger
         console.log(board);
 
         if (conf == true ) {

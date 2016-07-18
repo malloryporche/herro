@@ -26,7 +26,7 @@ Template.addNewTaskLists.events({
 
 			// App notifications 
 			if (error) {
-				sAlert.error("You have been unsuccessful in your pursuits."); }
+				sAlert.error("You have been unsuccessful in your pursuits to create a new tasklist."); }
 			 else {
              sAlert.success("You have successfully created a tasklist entitled " + taskListTitle + " .")
 			}
